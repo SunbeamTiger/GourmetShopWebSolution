@@ -1,0 +1,28 @@
+﻿body 
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hero-image 
+{
+    background-image: url("/webroot/images/gourmetsmall.jpg");
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userinput 
+{
+    border: solid 2px grey;
+    padding:2px;
+}
+.login 
+{
+    width: 275px;
+    height: 180px;
+    padding: 5px;
+    margin: 5px 5px;
+    float: right;
+    border: solid 1px black;
+    background-color:beige;
+}
+

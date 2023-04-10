@@ -1,0 +1,9 @@
+USE GourmetShop
+GO
+ALTER TABLE Customer
+ADD 
+Username	NVARCHAR (50),
+Pass		NVARCHAR (50),
+Salt		NVARCHAR (30),
+DateCreated SMALLDATETIME	CONSTRAINT Default_Date DEFAULT GETDATE(),
+Vists		SMALLINT		CONSTRAINT Default_Visit DEFAULT 0;

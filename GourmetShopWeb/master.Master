@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="GourmetShopWeb.master" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="Scripts/umd/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="default.aspx">GourmetShop.com</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="default.aspx">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.aspx">Contact</a></li>
+                        <li class="nav-item dropdown"></li>
+                    </ul>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Data</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="grid.aspx">Grid</a></li>
+                            <li><a class="dropdown-item" href="repeater.aspx">Repeater</a></li>
+                            <li><a class="dropdown-item" href="#">More</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+            <div>
+                <h1>Welcome to the Gourmet Shop!</h1>
+                <div class="Container body-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div style="width:100%; height:40px; padding:5px; background-color:black; text-align:center;">
+                    <asp:Label ID="lblCopyright" runat="server" ForeColor="White" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
