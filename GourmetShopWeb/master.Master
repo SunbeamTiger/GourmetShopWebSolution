@@ -28,11 +28,23 @@
                         <li class="nav-item dropdown"></li>
                     </ul>
 
+                    /* Additional menu options for authenticated users -AP */
                     <asp:Panel runat="server" ID="Authenticated">
-                        <ul id="authenticated" class="navbar-nav mr-auto">
-                          <li class="nav-item active"><a class="nav-link" href="Profile.aspx">Profile</a></li>
-                         </ul>
-                    
+                          <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active"><a class="nav-link" href="Profile.aspx">Profile</a></li>
+                              <li class="nav-item"><asp:Label ID="lblGreeting" runat="server" ForeColor="White" />
+                              <li/><asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" ValidationGroup="Logout" />
+                        </ul>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="grid.aspx">Grid</a></li>
+                            <li><a class="dropdown-item" href="repeater.aspx">Repeater</a></li>
+                            <li><a class="dropdown-item" href="#">More</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+
+                    </asp:Panel>
+
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Data</button>
                             <ul class="dropdown-menu">
@@ -43,7 +55,9 @@
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                             </ul>
                         </div>
-                    </asp:Panel>
+
+                    
+
                 </div>
             </nav>
             </div>
