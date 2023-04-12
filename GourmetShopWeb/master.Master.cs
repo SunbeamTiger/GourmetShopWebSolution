@@ -11,6 +11,10 @@ namespace GourmetShopWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Hide or show additional navigation options to authenticated users. AP 4/12
+            Authenticated.Visible = false;
+            if (Session["Customer"] != null) { Authenticated.Visible = true; }
+
             lblCopyright.Text = "Copyright " + "&#169 " + DateTime.Now.Year + ". All the Important money-making rights reserved";
         }
     }

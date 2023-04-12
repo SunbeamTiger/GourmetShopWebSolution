@@ -14,7 +14,7 @@ namespace GourmetShopWeb
             if (Session["Customer"] == null)
             {
 
-                Response.Redirect("PublicPage.aspx");
+                Response.Redirect("Default.aspx");
             }
             else
             {

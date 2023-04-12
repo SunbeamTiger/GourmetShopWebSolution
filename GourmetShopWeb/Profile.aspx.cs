@@ -11,7 +11,15 @@ namespace GourmetShopWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
+            if (Session["Customer"] == null)
+                {
+                    Response.Redirect("Default.aspx");
+                }
+            else
+                {
+                    Customer c = Session["Customer"] as Customer;
+                    lblGreeting.Text = "Welcome, " + c.FullName + "!";
+                }
+            }
     }
 }
