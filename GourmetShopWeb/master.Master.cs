@@ -12,10 +12,9 @@ namespace GourmetShopWeb
     {
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // May not be the best solution -AP 4/12
+            Authenticated.Visible = false;
             HttpContext.Current.Session.Clear();
             HttpContext.Current.Session.Abandon();
-            HttpContext.Current.Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
             Response.Redirect("Default.aspx");
         }
 
