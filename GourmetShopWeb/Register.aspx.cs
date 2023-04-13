@@ -15,5 +15,11 @@ namespace GourmetShopWeb
 
             }
         }
+
+        public void btnRegister_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Hello " + txtFirstName + " " + txtLastName);
+
+        }
     }
 }
