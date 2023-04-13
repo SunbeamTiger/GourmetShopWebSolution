@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.ModelBinding;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 /*
  * To Do:  Add form validation and error condition
  */
@@ -19,17 +14,27 @@ namespace GourmetShopWeb
             {
                 txtLastName.Text = string.Empty;
                 txtFirstName.Text = string.Empty;
-                txtPassword.Text = string.Empty;     
+                txtPassword.Text = string.Empty;  
+                txtEmail.Text = string.Empty; //used as username
             }
         }
 
         public void btnRegister_Click(object sender, EventArgs e)
         {
+            // Assuming valid - bad juju
+            Customer c = new Customer(txtFirstName.Text, txtLastName.Text, txtEmail.Text);
+            ChangePassword(c, txtPassword.ToString());
 
-            Customer c = new Customer(txtFirstName.Text, txtLastName.Text);
-            lock (this) { Session["Customer"] = c; 
+            c.SaveChanges();
+            lock (this) { Session["Customer"] = c; }
             Response.Redirect("Members.aspx");
 
         }
+
+        private void ChangePassword(Customer c, string password)
+        {
+
+        }
+
     }
 }

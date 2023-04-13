@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GourmetShopWeb.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,12 @@ namespace GourmetShopWeb
         private string _address;
         private int _visitNumber;
         public ShoppingCart Cart { get; set; }
+
+        private string _Email;
+        private string _Salt;
+        private string _PasswordHash;
+
+       
         public Customer(string lastname, string firstName, string address, int visitNumber)
         {
             _Lastname = lastname;
@@ -20,10 +27,11 @@ namespace GourmetShopWeb
             _visitNumber = visitNumber;
         }
 
-        public Customer(string lastname, string firstName)
+        public Customer(string lastname, string firstName, string email)
         {
             _Lastname = lastname;
             _FirstName = firstName;
+            _Email = email;
         }
 
         public string Firstname

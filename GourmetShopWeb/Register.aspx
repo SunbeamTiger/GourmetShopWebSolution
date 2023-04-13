@@ -9,6 +9,7 @@
         <div style="padding-left:100px">
            First Name:<br /><asp:TextBox ID="txtFirstName" CssClass="userinput" runat="server" /><br />
            Last Name:<br /><asp:TextBox ID="txtLastName" CssClass="userinput" runat="server" /><br />
+           Email Address:<br /><asp:TextBox ID="txtEmail" CssClass="userinput" runat="server" /><br />
            Password:<br /><asp:TextBox ID="txtPassword" CssClass="userinput" TextMode="Password" runat="server" /><br />
            <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" text="Register"/>
         </div>
