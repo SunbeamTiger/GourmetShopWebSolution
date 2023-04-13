@@ -20,6 +20,12 @@ namespace GourmetShopWeb
             _visitNumber = visitNumber;
         }
 
+        public Customer(string lastname, string firstName)
+        {
+            _Lastname = lastname;
+            _FirstName = firstName;
+        }
+
         public string Firstname
         {
             get { return _FirstName; }

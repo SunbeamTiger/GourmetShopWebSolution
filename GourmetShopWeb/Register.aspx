@@ -13,5 +13,7 @@
            <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" text="Register"/>
         </div>
 
+    <asp:Label ID="lblRegistered" runat="server" />
+
 
 </asp:Content>
