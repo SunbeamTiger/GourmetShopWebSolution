@@ -9,8 +9,18 @@
            Password:<br /><asp:TextBox ID="txtPassword" CssClass="userinput" TextMode="Password" runat="server" /><br />
            <asp:Button ID="btnLogin" Style="margin-top:5px;" runat="server" Width="100px" CssClass="userinput" Text="Log in" OnClick="btnLogin_Click" ValidationGroup="Login" />
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" /><br />
-            <asp:LinkButton ID="lnkCreateAccount" runat="server" Text="Create an Account" />
+        <div class="form-check mb-2 mr-sm-2">
+         <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineFormCheck"
+           />
+            <label class="form-check-label" for="inlineFormCheck">
+                Remember me
+            </label>
         </div>
+            <asp:LinkButton ID="lnkCreateAccount" runat="server" Text="Create an Account" />
+     </div>
         <div  class="hero-image">
 
         </div>

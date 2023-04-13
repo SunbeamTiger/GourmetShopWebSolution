@@ -36,8 +36,11 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Separated link</a></li>
                         </ul>
-                    </div>
+                    </div>                
                 </div>
+                     <div>
+                        <button class="btn btn-outline-danger btn-sm ">Log-Out</button>              
+                    </div>
             </nav>
             </div>
             <div>
@@ -46,7 +49,6 @@
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-
                 <div style="width:100%; height:40px; padding:5px; background-color:black; text-align:center;">
                     <asp:Label ID="lblCopyright" runat="server" ForeColor="White" />
                 </div>
