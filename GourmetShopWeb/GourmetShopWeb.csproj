@@ -85,6 +85,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="CSS\Profile.css" />
     <Content Include="Database_Scripts\Alter_Customer_Table.sql" />
     <Content Include="Database_Scripts\GourmetShop_Drop_and_Recreate.sql" />
     <Content Include="Grid.aspx" />
