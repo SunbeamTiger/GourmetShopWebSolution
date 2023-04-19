@@ -27,7 +27,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact.aspx">Contact</a></li>
                         <li class="nav-item dropdown"></li>
                     </ul>
-                    <div class="btn-group">
+               <div class="btn-group">
                         <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Data</button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="grid.aspx">Grid</a></li>
@@ -39,7 +39,7 @@
                     </div>                
                 </div>
                      <div>
-                        <button class="btn btn-outline-danger btn-sm ">Log-Out</button>              
+                        <button type="button" class="btn btn-outline-danger btn-sm ">Log-Out</button>              
                     </div>
             </nav>
             </div>
