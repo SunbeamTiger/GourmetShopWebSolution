@@ -25,6 +25,7 @@
                         <li class="nav-item active"><a class="nav-link" href="default.aspx">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.aspx">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="displayproducts.aspx">Products</a></li>
                         <li class="nav-item dropdown"></li>
                     </ul>
 

@@ -88,6 +88,7 @@
     <Content Include="CSS\Profile.css" />
     <Content Include="Database_Scripts\Alter_Customer_Table.sql" />
     <Content Include="Database_Scripts\GourmetShop_Drop_and_Recreate.sql" />
+    <Content Include="DisplayProducts.aspx" />
     <Content Include="Grid.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Members.aspx" />
@@ -206,6 +207,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayProducts.aspx.cs">
+      <DependentUpon>DisplayProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayProducts.aspx.designer.cs">
+      <DependentUpon>DisplayProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\db.cs" />
