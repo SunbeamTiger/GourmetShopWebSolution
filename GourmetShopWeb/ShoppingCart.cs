@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using GourmetShopWeb.Models;
+using GourmetShopWeb.Data;
 
 namespace GourmetShopWeb
 {
@@ -10,7 +11,7 @@ namespace GourmetShopWeb
     {
         public string ShoppingCartId { get; set; }
 
-        private GourmetShop _db = new GourmetShop();  // ???
+        private ProductContext _db = new ProductContext();
 
         public const string CartSessionKey = "CartId";
 
@@ -19,7 +20,7 @@ namespace GourmetShopWeb
             // Retrieve the product from the database.           
             ShoppingCartId = GetCartId();
 
-            var cartItem = _db.ShoppingCartItems.SingleOrDefault(   // huh?...
+            var cartItem = _db.ShoppingCartItems.SingleOrDefault(
                 c => c.CartId == ShoppingCartId
                 && c.ProductId == id);
             if (cartItem == null)
@@ -30,8 +31,8 @@ namespace GourmetShopWeb
                     ItemId = Guid.NewGuid().ToString(),
                     ProductId = id,
                     CartId = ShoppingCartId,
-                    Product = _db.Products.SingleOrDefault(
-                   p => p.ProductID == id),
+                    product = _db.Products.SingleOrDefault(
+                   p => p.productId == id),
                     Quantity = 1,
                     DateCreated = DateTime.Now
                 };

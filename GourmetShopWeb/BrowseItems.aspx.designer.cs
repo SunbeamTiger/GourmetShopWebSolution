@@ -7,20 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GourmetShopWeb
-{
 
 
-    public partial class BrowseItems
-    {
+public partial class  {
 
-        /// <summary>
-        /// productList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView productList;
-    }
+    /// <summary>
+    /// gridProducts control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.GridView gridProducts;
 }

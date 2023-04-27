@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GourmetShopWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,8 +25,16 @@ namespace GourmetShopWeb
                     conn.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                        gridProducts.DataSource = dr;
-                        gridProducts.DataBind();
+                        //    gridProducts.DataSource = dr;
+                        //    gridProducts.DataBind();
+                        while (dr.Read())
+                        {
+                            yield return new Product
+                            {
+                                productId = (int)dr["id"],
+                                productName = (string)dr["name"]
+                            };
+                        }
                     }
                 }
             }
