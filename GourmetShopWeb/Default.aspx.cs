@@ -43,9 +43,8 @@ namespace GourmetShopWeb
                             //visit += 1;                           
                             Customer c = new Customer(lastname, firstname, Address, visit);
                             Session["Customer"] = c;
-                            Server.Transfer("Members.aspx");
-                           
-                             Response.Redirect("Members.aspx");
+                            Server.Transfer("Members.aspx");                          
+                            Response.Redirect("Members.aspx");
                         }
                         else
                         {
@@ -53,8 +52,7 @@ namespace GourmetShopWeb
                         }
                    }
                 }
-            }
-
+            }        
             //if (txtUsername.Text=="dhagen" && txtPassword.Text=="Centralia")
             //{
             //    //  Server.Transfer("Members.aspx");
@@ -64,15 +62,11 @@ namespace GourmetShopWeb
             //}
             //else
             //    lblMessage.Text = "Login not recognized";
-
         }
-
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             Session.Clear();
             Response.Redirect("Register.aspx");
-
         }
-
     }
 }

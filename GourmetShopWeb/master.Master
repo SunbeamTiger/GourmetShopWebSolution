@@ -47,22 +47,8 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Separated link</a></li>
                         </ul>
-
                     </div>                
-
-
                     </asp:Panel>
-
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Data</button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="grid.aspx">Grid</a></li>
-                                <li><a class="dropdown-item" href="repeater.aspx">Repeater</a></li>
-                                <li><a class="dropdown-item" href="#">More</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Separated link</a></li>
-                            </ul>
-                        </div>
 
                 </div>
                      <div>
@@ -76,8 +62,6 @@
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-
-
                 <div style=" position: fixed; width: 100%; height:40px; padding:5px; background-color:black; text-align:center; bottom: 0;">
 
                     <asp:Label ID="lblCopyright" runat="server" ForeColor="White" />
