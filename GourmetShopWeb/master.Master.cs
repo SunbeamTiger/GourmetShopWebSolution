@@ -32,5 +32,6 @@ namespace GourmetShopWeb
             lblCopyright.Text = "Copyright " + "&#169 " + DateTime.Now.Year + ". All the Important money-making rights reserved";
 
         }
+        
     }
 }
