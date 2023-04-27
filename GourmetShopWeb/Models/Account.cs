@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.IO.Pipes;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -6,18 +8,26 @@ namespace GourmetShopWeb.Tools
 {
     public static class Account
     {
-        private static string GenerateSalt()
+        public static string GenerateSalt()
         {
-            return string.Empty;
+            Guid guid= Guid.NewGuid();
+            return guid.ToString();
         }
+
         private static string ComputeHash(byte[] bytesToHash, byte[] salt)
         {
             return string.Empty;
         }
-        public static string CreatePasswordHash(string password)
+
+        public static string CreatePasswordHash(string password, string salt)
         {
-            return string.Empty;
+            SHA256 sha256Hash = SHA256.Create();
+            string source = password + salt;            
+            byte[] hashValue = sha256Hash.ComputeHash(Encoding.ASCII.GetBytes(source));
+
+            return sha256Hash.ToString();
         }
+
         public static bool VerifyPassword(string password) 
         {
             // retrieve salt and hash from db

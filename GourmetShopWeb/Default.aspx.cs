@@ -54,6 +54,7 @@ namespace GourmetShopWeb
                    }
                 }
             }
+
             //if (txtUsername.Text=="dhagen" && txtPassword.Text=="Centralia")
             //{
             //    //  Server.Transfer("Members.aspx");
@@ -63,7 +64,14 @@ namespace GourmetShopWeb
             //}
             //else
             //    lblMessage.Text = "Login not recognized";
-          
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Register.aspx");
+
         }
 
     }
