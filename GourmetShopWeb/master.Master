@@ -25,6 +25,7 @@
                         <li class="nav-item active"><a class="nav-link" href="default.aspx">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.aspx">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="browseitems.aspx">Browse Items</a></li>
                         <li class="nav-item dropdown"></li>
                     </ul>
 
@@ -33,6 +34,8 @@
 
 
                     /* Additional menu options for authenticated users -AP */
+                    <asp:Button runat="server" Text="Shopping Cart" PostBackUrl="~/Cart.aspx"></asp:Button>
+
                     <asp:Panel runat="server" ID="Authenticated">
                           <ul class="navbar-nav mr-auto">
                               <li class="nav-item active"><a class="nav-link" href="Profile.aspx">Profile</a></li>
