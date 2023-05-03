@@ -25,16 +25,8 @@ namespace GourmetShopWeb
                     conn.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                        //    gridProducts.DataSource = dr;
-                        //    gridProducts.DataBind();
-                        while (dr.Read())
-                        {
-                            yield return new Product
-                            {
-                                productId = (int)dr["id"],
-                                productName = (string)dr["name"]
-                            };
-                        }
+                        gridProducts.DataSource = dr;
+                        gridProducts.DataBind();
                     }
                 }
             }
